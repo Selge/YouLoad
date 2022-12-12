@@ -1,11 +1,14 @@
 # YouLoad #
 
-Very simple (Perhaps this will become a more useful GUI application later) YouTube playlist downloader (using pytube library).
+Very simple (perhaps this will become a more useful GUI application later) YouTube playlist downloader (using pytube library).
 
 
-Pytube link:  **https://pytube.io/en/latest/index.html**
+**Pytube link:**  ***https://pytube.io/en/latest/index.html***
+
 
 ### How this stuff works: ###
+
+First you may set up the list of the YouTube playlist links 
 
 Please note the list item format: that should look like [Playlist(your_link), Playlist(your_link_1)]
 
