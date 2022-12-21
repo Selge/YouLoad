@@ -1,6 +1,6 @@
 # YouLoad #
 
-Very simple (perhaps this will become a more useful GUI application later) YouTube playlist downloader (using pytube library).
+Very simple (perhaps this will turn into a more useful GUI application later) YouTube playlist downloader (using pytube library).
 
 
 **Pytube link:**  ***https://pytube.io/en/latest/index.html***
