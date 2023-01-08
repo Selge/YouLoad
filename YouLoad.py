@@ -1,10 +1,6 @@
 from pytube import Playlist
 
 
-def main_menu():
-    """Some download options"""
-
-
 # Setting up the playlist/list of playlists you might want to download
 playlists = [Playlist("https://www.youtube.com/playlist?list=whatever/put_here_any_playlist_link_you_want")]
 # Setting up the list of target video formats
@@ -23,5 +19,4 @@ def load_me_plently(target_pl, ext):
 
 if __name__ == '__main__':
     # calling the function/ target playlist and required video format are the arguments
-    # load_me_plently(playlists[0], required_ext[0])
-    main_menu()
+    load_me_plently(playlists[0], required_ext[0])
