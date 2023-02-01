@@ -14,17 +14,6 @@ playlists = [Playlist(input("Please enter the playlist URL:  "))]
 # Setting up the list of target video formats
 required_ext = ['mp4']
 
-pytube.request.default_range_size = 500_000
-yt = YouTube(single_url, on_progress_callback=on_progress, on_complete_callback=on_complete)
-stream = yt.streams.filter(progressive=True, file_extension=required_ext[0]).get_highest_resolution()
-
-
-def typewrite(num_1, num_2, text):
-    for character in text:
-        r = random.uniform(num_1, num_2)
-        time.sleep(r)
-        print(character, end='', flush=True)
-
 
 def on_complete(a, b):
     completed = "\nDownload completed!\n"
@@ -38,6 +27,17 @@ def on_complete(a, b):
     for item in txt_list:
         typewrite(.05, .1, item)
         print('-' * 60)
+
+pytube.request.default_range_size = 500_000
+yt = YouTube(single_url, on_progress_callback=on_progress, on_complete_callback=on_complete)
+stream = yt.streams.filter(progressive=True, file_extension=required_ext[0]).get_highest_resolution()
+
+
+def typewrite(num_1, num_2, text):
+    for character in text:
+        r = random.uniform(num_1, num_2)
+        time.sleep(r)
+        print(character, end='', flush=True)
 
 
 def load_me_single():
