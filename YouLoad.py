@@ -12,7 +12,7 @@ playlists = [Playlist(str(input("Please enter the playlist URL:  "))).lower()]
 # url = input("https://www.youtube.com/playlist?list=whatever/put_here_any_video_link_you_want")
 # playlists = [Playlist("https://www.youtube.com/playlist?list=whatever/put_here_any_playlist_link_you_want")]
 # Setting up the list of target video formats
-required_ext = ['mp4', 'mov', 'mpeg-1', ]
+required_ext = ['mp4', 'mov', 'mpeg-1', 'mpeg-2', 'mpeg4', 'mpg', ]
 
 
 def on_complete(a, b):
