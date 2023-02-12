@@ -7,8 +7,8 @@ from pytube.cli import on_progress
 
 
 # Setting up the playlist/list of playlists you might want to download
-single_url = input("Please enter the single video URL:  ")
-playlists = [Playlist(input("Please enter the playlist URL:  "))]
+single_url = str(input("Please enter the single video URL:  ")).lower()
+playlists = [Playlist(str(input("Please enter the playlist URL:  "))).lower()]
 # url = input("https://www.youtube.com/playlist?list=whatever/put_here_any_video_link_you_want")
 # playlists = [Playlist("https://www.youtube.com/playlist?list=whatever/put_here_any_playlist_link_you_want")]
 # Setting up the list of target video formats
