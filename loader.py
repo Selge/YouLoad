@@ -30,4 +30,5 @@ class Videolist:
 
     def load_me_plently(self, target_pl, ext):
         for video in target_pl.videos:
-            video.streams.filter(file_extension=f'{ext}').first().download(f"./{target_pl.title}")
+            video.streams.filter(progressive=True,
+                                 file_extension=self.required_ext[0]).get_highest_resolution().download(f"./{target_pl.title}")
