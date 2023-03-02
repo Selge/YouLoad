@@ -14,27 +14,19 @@ yt = YouTube(single_url)
 stream = yt.streams.filter(progressive=True, file_extension=required_ext[0]).get_highest_resolution()
 
 
-def on_complete(a, b):
-    completed = "\nDownload completed!\n"
-    size = 'File Size: ' + str(stream.filesize/1_000_000) + 'Mb\n'
-    title = 'Title: ' + stream.title + '\n'
-    desc = 'Description: ' + yt.description + '\n'
-    author = 'Author: ' + yt.author + '\n'
-    length = 'Video length: ' + str(yt.length) + 'Seconds\n'
-
-    txt_list = f'{completed}, {title}, {author}, {desc}, {length}, {size}'
-    return txt_list
-
-
 class Clip:
-    def load_me_single(self):
-        stream.download()
+    def __init__(self):
+        self.video = single_url
+
+    def load_me_single(self, video):
+        video.stream.download(f"./{video.title}")
 
 
 class Videolist:
+    def __init__(self):
+        self.target_pl = playlists
+        self.required_ext = required_ext[0]
+
     def load_me_plently(self, target_pl, ext):
-        """ Loading all the videos from the target YouTube playlist """
-        # iterating all the videos on the playlist:
         for video in target_pl.videos:
-            # downloading:
             video.streams.filter(file_extension=f'{ext}').first().download(f"./{target_pl.title}")
