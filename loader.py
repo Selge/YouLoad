@@ -15,7 +15,9 @@ class Clip:
     def __init__(self):
         self.video = str(input("Please enter the single video URL:  ")).lower()
         self.yt = YouTube(self.video)
-        self.stream = self.yt.streams.filter(progressive=True, file_extension=required_ext[0]).get_highest_resolution()
+        self.required_ext = required_ext[0]
+        self.stream = self.yt.streams.filter(progressive=True,
+                                             file_extension=self.required_ext[0]).get_highest_resolution()
 
     def load_me_single(self, video):
         video.stream.download(f"./{video.title}")
