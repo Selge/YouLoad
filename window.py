@@ -10,14 +10,20 @@ def main(page: flet.Page):
     page.window_width = 600
 
 
-    def handle_submit():
+    def handle_submit(*args):
         if not url_input.value:
             url_input.error_text = "Please enter URL"
             page.update()
         else:
             url_input.error_text = None
-            run_loader(url_input.value, in_progress, on_complete, handle_error)
-            page.update()
+            if url_input.value.__contains__("youtube.com/watch"):
+                run_loader = loader.Clip()
+                run_loader.load_me_single(url_input.value, in_progress, on_complete, handle_error)
+                page.update()
+            elif url_input.value.__contains__("youtube.com/playlist"):
+                run_loader = loader.Videolist()
+                run_loader.load_me_plently(url_input.value, in_progress, on_complete, handle_error)
+                page.update()
 
     def in_progress():
         download_complete.value = "Download In Progress"
