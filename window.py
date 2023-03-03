@@ -1,7 +1,7 @@
 import flet
 
+import loader
 
-run_loader = None
 
 def main(page: flet.Page):
     page.title = "YouLoad"
@@ -10,7 +10,7 @@ def main(page: flet.Page):
     page.window_width = 600
 
 
-    def handle_submit(e):
+    def handle_submit():
         if not url_input.value:
             url_input.error_text = "Please enter URL"
             page.update()
@@ -19,15 +19,15 @@ def main(page: flet.Page):
             run_loader(url_input.value, in_progress, on_complete, handle_error)
             page.update()
 
-    def in_progress(*args):
+    def in_progress():
         download_complete.value = "Download In Progress"
         page.update()
 
-    def on_complete(*args):
+    def on_complete():
         download_complete.value = "Download Complete"
         page.update()
 
-    def handle_error(*args):
+    def handle_error():
         download_complete.value = "Something went wrong, try again"
         page.update()
 
