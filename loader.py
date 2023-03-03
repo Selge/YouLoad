@@ -6,7 +6,7 @@ from pytube import YouTube
 from pytube.cli import on_progress
 
 
-playlists = [Playlist(str(input("Please enter the playlist URL:  "))).lower()]
+playlist = [Playlist(str(input("Please enter the playlist URL:  "))).lower()]
 required_ext = ['mp4']
 pytube.request.default_range_size = 500_000
 
@@ -25,7 +25,7 @@ class Clip:
 
 class Videolist:
     def __init__(self):
-        self.target_pl = playlists
+        self.target_pl = playlist
         self.required_ext = required_ext[0]
 
     def load_me_plently(self, target_pl, ext):
