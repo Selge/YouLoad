@@ -6,6 +6,8 @@ from pytube import YouTube
 from pytube.cli import on_progress
 
 1
+2
+
 
 
 # Setting up the playlist/list of playlists you might want to download
