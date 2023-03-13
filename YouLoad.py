@@ -5,22 +5,6 @@ import pytube.request
 from pytube import YouTube
 from pytube.cli import on_progress
 
-1
-2
-3
-4
-5
-6
-7
-8
-9
-10
-11
-12
-13
-14
-15
-16
 
 # Setting up the playlist/list of playlists you might want to download
 single_url = str(input("Please enter the single video URL:  ")).lower()
