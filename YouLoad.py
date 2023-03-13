@@ -14,6 +14,7 @@ from pytube.cli import on_progress
 7
 8
 9
+10
 
 # Setting up the playlist/list of playlists you might want to download
 single_url = str(input("Please enter the single video URL:  ")).lower()
