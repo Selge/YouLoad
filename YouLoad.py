@@ -38,6 +38,7 @@ def typewrite(num_1, num_2, text):
         r = random.uniform(num_1, num_2)
         time.sleep(r)
         print(character, end='', flush=True)
+        ...
 
 
 def load_me_single():
