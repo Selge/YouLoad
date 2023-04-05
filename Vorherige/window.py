@@ -1,6 +1,6 @@
 import flet
 
-import loader
+from Vorherige import loader
 
 
 def main(page: flet.Page):
