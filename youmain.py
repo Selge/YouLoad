@@ -13,11 +13,11 @@ def check_link(res):
     check = str(res).lower()
     if 'playlist' in check:
         check = yl.Multi()
-        check.reprint()
+        check.load_me_plenty(check)
 
     else:
         check = yl.Single()
-        check.reprint()
+        check.load_me_single(check)
 
 
 window = tkinter.Tk()
