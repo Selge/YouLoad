@@ -39,9 +39,5 @@ button.grid(column=0, row=2)
 # request link field
 link = tkinter.Entry(window, width=50)
 link.grid(column=0, row=1)
-# result message window
-text = scrolledtext.ScrolledText(window, width=40, height=10)
-text.grid(column=0, row=4)
-text.insert(INSERT, 'Текстовое поле')
 
 window.mainloop()
