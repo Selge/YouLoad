@@ -1,5 +1,4 @@
 import tkinter
-from tkinter import scrolledtext, INSERT
 
 import youload as yl
 
